@@ -1,0 +1,10 @@
+[
+  {
+    "Id": 1,
+    "FirstName": "Nika",
+    "LastName": "ebralidze",
+    "PersonalNumber": "1234",
+    "Password": "6523",
+    "Balance": 80
+  }
+]

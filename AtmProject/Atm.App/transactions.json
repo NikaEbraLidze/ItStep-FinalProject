@@ -1,0 +1,23 @@
+[
+  {
+    "UserId": 1,
+    "Type": 0,
+    "Amount": 0,
+    "NewBalance": 0,
+    "DateTime": "2025-11-27T17:16:31.4329976+04:00"
+  },
+  {
+    "UserId": 1,
+    "Type": 1,
+    "Amount": 100,
+    "NewBalance": 100,
+    "DateTime": "2025-11-27T17:16:40.3460931+04:00"
+  },
+  {
+    "UserId": 1,
+    "Type": 2,
+    "Amount": 20,
+    "NewBalance": 80,
+    "DateTime": "2025-11-27T17:16:46.3439815+04:00"
+  }
+]
