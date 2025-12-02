@@ -34,6 +34,7 @@ namespace GuessingGame.UI
 
                 while (true)
                 {
+                    Console.Clear();
                     Console.Write("Choose difficulty (1=Easy, 2=Medium, 3=Hard): ");
                     input = Console.ReadLine();
 
@@ -60,6 +61,7 @@ namespace GuessingGame.UI
 
                 var result = service.PlayGame(name, difficulty);
 
+                Console.Clear();
                 Console.WriteLine(result.Score > 0
                     ? $"Congratulations! You won! Score: {result.Score}"
                     : "You lost! Better luck next time.");

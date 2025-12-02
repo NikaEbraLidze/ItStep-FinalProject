@@ -60,18 +60,62 @@ namespace Atm.App
             Console.Clear();
             Console.WriteLine("=== New user registration ===");
 
-            Console.Write("First name: ");
-            string firstName = Console.ReadLine();
+            string firstName;
+            string lastName;
+            string personalNumber;
 
-            Console.Write("Last name: ");
-            string lastName = Console.ReadLine();
-
-            Console.Write("Personal number: ");
-            string personalNumber = Console.ReadLine();
-
-            if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrWhiteSpace(personalNumber))
+            while (true)
             {
-                throw new ArgumentException("All fields are required.");
+                Console.Write("First name: ");
+                firstName = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(firstName))
+                {
+                    Console.WriteLine("First name cannot be empty. Try again.\n");
+                    continue;
+                }
+
+                break;
+            }
+
+            while (true)
+            {
+                Console.Write("Last name: ");
+                lastName = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(lastName))
+                {
+                    Console.WriteLine("Last name cannot be empty. Try again.\n");
+                    continue;
+                }
+
+                break;
+            }
+
+            while (true)
+            {
+                Console.Write("Personal number (11 digits): ");
+                personalNumber = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(personalNumber))
+                {
+                    Console.WriteLine("Personal number cannot be empty. Try again.\n");
+                    continue;
+                }
+
+                if (personalNumber.Length != 11)
+                {
+                    Console.WriteLine("Personal number must be exactly 11 digits. Try again.\n");
+                    continue;
+                }
+
+                if (!personalNumber.All(char.IsDigit))
+                {
+                    Console.WriteLine("Personal number can contain digits only. Try again.\n");
+                    continue;
+                }
+
+                break;
             }
 
             var newUser = await _accountService.RegisterUserAsync(firstName, lastName, personalNumber);
@@ -81,6 +125,8 @@ namespace Atm.App
             Console.WriteLine("Press any key to log in...");
             Console.ReadKey();
         }
+
+
 
         private async Task HandleLoginAsync()
         {
