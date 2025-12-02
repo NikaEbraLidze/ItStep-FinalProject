@@ -19,5 +19,26 @@
     "Amount": 20,
     "NewBalance": 80,
     "DateTime": "2025-11-27T17:16:46.3439815+04:00"
+  },
+  {
+    "UserId": 2,
+    "Type": 0,
+    "Amount": 0,
+    "NewBalance": 0,
+    "DateTime": "2025-12-02T21:13:53.1513759+04:00"
+  },
+  {
+    "UserId": 2,
+    "Type": 1,
+    "Amount": 100,
+    "NewBalance": 100,
+    "DateTime": "2025-12-02T21:14:33.3166086+04:00"
+  },
+  {
+    "UserId": 2,
+    "Type": 2,
+    "Amount": 50,
+    "NewBalance": 50,
+    "DateTime": "2025-12-02T21:14:45.8237841+04:00"
   }
 ]

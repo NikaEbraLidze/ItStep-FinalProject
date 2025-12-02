@@ -6,5 +6,13 @@
     "PersonalNumber": "1234",
     "Password": "6523",
     "Balance": 80
+  },
+  {
+    "Id": 2,
+    "FirstName": "Nika",
+    "LastName": "Ebralidze",
+    "PersonalNumber": "12345678910",
+    "Password": "3521",
+    "Balance": 50
   }
 ]

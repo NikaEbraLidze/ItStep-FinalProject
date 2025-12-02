@@ -64,7 +64,7 @@ namespace Atm.BLL
                     await _transactionService.WithdrawAsync(user, amount);
                     break;
                 default:
-                    throw new ArgumentException("არასწორი ოპერაციის ტიპი.");
+                    throw new ArgumentException("invalid operation type");
             }
 
             var users = await _dataStore.LoadUsersAsync();
